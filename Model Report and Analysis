@@ -1,0 +1,24 @@
+# Alphabet Soup Charity Report #
+
+## Overview ##
+
+The purpose of this analysis is to use the provided dataset to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup.
+
+## Results ## 
+
+### Data Preprocessing ###
+
+* Target variables for the model are `IS_SUCCESSFUL`
+* What variable(s) are the features for your model?`STATUS	ASK_AMT		AFFILIATION	APPLICATION_TYPE	CLASSIFICATION	INCOME_AMT	ORGANIZATION	SPECIAL_CONSIDERATIONS	USE_CASE`
+* `EIN` and `NAME` were removed from the input data because they are neither targets nor features
+
+### Compiling, Training, and Evaluating the Model ###
+
+How many neurons, layers, and activation functions did you select for your neural network model, and why?
+Were you able to achieve the target model performance?
+What steps did you take in your attempts to increase model performance?
+Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+
+
+model 1: 268/268 - 1s - loss: 0.5516 - accuracy: 0.7298 - 521ms/epoch - 2ms/step
+Loss: 0.5516148805618286, Accuracy: 0.7297959327697754
