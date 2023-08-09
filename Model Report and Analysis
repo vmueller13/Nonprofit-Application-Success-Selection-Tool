@@ -9,16 +9,21 @@ The purpose of this analysis is to use the provided dataset to create a binary c
 ### Data Preprocessing ###
 
 * Target variables for the model are `IS_SUCCESSFUL`
-* What variable(s) are the features for your model?`STATUS	ASK_AMT		AFFILIATION	APPLICATION_TYPE	CLASSIFICATION	INCOME_AMT	ORGANIZATION	SPECIAL_CONSIDERATIONS	USE_CASE`
+* What variable(s) are the features for your model? `STATUS`, `ASK_AMT`, `AFFILIATION`, `APPLICATION_TYPE`, `CLASSIFICATION`, `INCOME_AMT`, `ORGANIZATION`, `SPECIAL_CONSIDERATIONS`, `USE_CASE`
 * `EIN` and `NAME` were removed from the input data because they are neither targets nor features
 
 ### Compiling, Training, and Evaluating the Model ###
 
-How many neurons, layers, and activation functions did you select for your neural network model, and why?
-Were you able to achieve the target model performance?
-What steps did you take in your attempts to increase model performance?
-Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+* I selected two hidden layers with 21 and 14 neurons and one output layer with one neuron because neural network is designed for binary classification tasks. 
+* I conducted six optimization tests and I was not able to achieve target model performance.
+    * #Original accuracy: 0.7298
+        * #OPTIMIZATION TEST #1: Reduced the hidden nodes: layer 1: 10, layer 2: 8<--Accuracy: 0.7262 (-0.0036)
+        * #OPTIMIZATION TEST #2:  Added another hidden layer at 6 nodes<--accuracy: 0.7280 (-0.0018)
+        * #OPTIMIZATION TEST #3: Keep the layers and nodes the same and increase the epochs to 100<--accuracy: 0.7298 (back to original level)
+        * #OPTIMIZATION TEST #4: Change the nodes back to 21, 14, 7 and run with epoch =100<---accuracy: 0.7224 (-0.0074)
+        * #OPTIMIZATION TEST #5: Keep everything the same and change the validation_data=(X_test_scaled, y_test)<---accuracy: 0.7263 (-0.0035)
+        * #OPTIMIZATION TEST #6: Keep previous changes but change epochs back to 50<---accuracy: 0.7268 (-0.003)
 
+### Summary ###
+Over the original deep learning model was successful at creating a binary classifier that can predict with 73% accuracy whether the applicants will be successful if funded by Alphabet Soup. Overall, since the target accuracy was 75%, I would recommend a model with more than three hidden layers, a different number of hidden nodes per layer or changing the activation functions.
 
-model 1: 268/268 - 1s - loss: 0.5516 - accuracy: 0.7298 - 521ms/epoch - 2ms/step
-Loss: 0.5516148805618286, Accuracy: 0.7297959327697754
