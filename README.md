@@ -50,4 +50,4 @@ Use any or all of the following methods to optimize your model:
 ------
 
 
-The biggest challenge I faced in this project was to optimize the data for more than 75% accuracy. I ran ten optimization tests where I changed the coumns that were dropped, increased and decreased the number of epochs and added a third hidden layer. None of these tests were successful.
+The biggest challenge I faced in this project was to optimize the data for more than 75% accuracy. I ran six optimization tests where I changed the coumns that were dropped, increased and decreased the number of epochs and added a third hidden layer. None of these tests were successful.
