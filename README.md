@@ -11,9 +11,11 @@ From Alphabet Soup’s business team, you have received a CSV containing more th
 ------
 
 **Step 1: Preproccess the Data**
-Clean up the data by dropping uncessesary columns and determining the unique values for each column and choose a cutoff point for binning. Next, use `pd.get_dummies` to encode categorical variables, split the data into Split the preprocessed data into a features array, `X`, and a target array, `y`. Use these arrays and the train_test_split function to split the data into training and testing datasets. Scale the training and testing features datasets by creating a `StandardScaler` instance, fitting it to the training data, then using the `transform` function.
+
+After opening the notebook in Google Colab, clean up the data by dropping uncessesary columns and determining the unique values for each column and choose a cutoff point for binning. Next, use `pd.get_dummies` to encode categorical variables, split the data into Split the preprocessed data into a features array, `X`, and a target array, `y`. Use these arrays and the train_test_split function to split the data into training and testing datasets. Scale the training and testing features datasets by creating a `StandardScaler` instance, fitting it to the training data, then using the `transform` function.
 
 **Step 2: Compile, Train and Evaluate the Model**
+
 Using your knowledge of TensorFlow, you’ll design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup-funded organization will be successful based on the features in the dataset. You’ll need to think about how many inputs there are before determining the number of neurons and layers in your model. Once you’ve completed that step, you’ll compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
 
 * Continue using the file in Google Colab in which you performed the preprocessing steps from Step 1.
