@@ -1,4 +1,4 @@
-# Module 21 Challenge: Deep Learning
+# Deep Learning
 
 <ins>Project Overview</ins>
 ------
